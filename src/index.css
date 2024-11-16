@@ -22,8 +22,10 @@ body {
 
 /* Background images */
 .hero-img {
-    background: url('images/hero.png') no-repeat center;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.2) 100%),
+        url('images/hero.png') lightgray 50% no-repeat;
     background-size: cover;
+    background-position: center;
 }
 
 .strength-img {

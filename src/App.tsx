@@ -1,8 +1,12 @@
 import './index.css';
-import { Modal } from './components/Modal';
+import { Hero } from './sections/Hero';
 
 function App() {
-    return <Modal />;
+    return (
+        <main className='flex flex-col w-full h-full text-white'>
+            <Hero />
+        </main>
+    );
 }
 
 export default App;
