@@ -19,3 +19,22 @@ body {
     padding: 0;
     font-family: 'Roboto', sans-serif;
 }
+
+.hero-img {
+    background: url('images/hero.png') no-repeat center;
+}
+
+.strength-img {
+    background: url('images/strength.png') no-repeat center;
+}
+
+.boxing-img {
+    background: url('images/boxing.png') no-repeat center;
+}
+.cardio-img {
+    background: url('images/cardio.png') no-repeat center;
+}
+
+.yoga-img {
+    background: url('images/yoga.png') no-repeat center;
+}
