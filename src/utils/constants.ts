@@ -23,3 +23,14 @@ export enum ParagraphSize {
     p2 = 'p2',
     p3 = 'p3',
 }
+
+/**
+ * An object containing props that will animate an element with a slide up
+ * animation initially and a slide down animation when it disappears.
+ */
+export const slideVariants = {
+    initial: { y: '100%', opacity: 0 },
+    whileInView: { y: '0%', opacity: 1 },
+    exit: { y: '100%', opacity: 0 },
+    transition: { duration: 0.4, ease: 'easeInOut' }
+}
