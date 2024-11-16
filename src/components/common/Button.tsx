@@ -1,4 +1,4 @@
-import { ParagraphSize, ParagraphStyle } from '../../utils';
+import { ParagraphStyle } from '../../utils';
 
 interface ButtonProps {
     text: string;

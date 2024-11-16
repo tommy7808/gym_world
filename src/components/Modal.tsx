@@ -25,7 +25,7 @@ const ModalContent = forwardRef(({ onOpen, onClose, isOpen }: ModalContentProps,
                     // @ts-ignore
                     ref={ref}
                     {...slideVariants}
-                    className={`flex flex-col w-[90%] md:w-3/4 max-w-[1203px] h-[60%] md:h-[70%] rounded-xl fixed top-[10%] text-white modal-img p-3`}>
+                    className={`flex flex-col w-[90%] md:w-3/4 max-w-[1203px] h-[60%] md:h-[70%] rounded-xl fixed top-0 text-white modal-img p-3`}>
                     <header className='flex w-full justify-end p-4'>
                         <img
                             src={closeIcon}
