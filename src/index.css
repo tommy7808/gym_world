@@ -22,19 +22,31 @@ body {
 
 .hero-img {
     background: url('images/hero.png') no-repeat center;
+    background-size: cover;
 }
 
 .strength-img {
     background: url('images/strength.png') no-repeat center;
+    background-size: cover;
 }
 
 .boxing-img {
     background: url('images/boxing.png') no-repeat center;
+    background-size: cover;
 }
 .cardio-img {
     background: url('images/cardio.png') no-repeat center;
+    background-size: cover;
 }
 
 .yoga-img {
     background: url('images/yoga.png') no-repeat center;
+    background-size: cover;
+}
+
+.modal-img {
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.4) 100%),
+        url('images/modal.jpeg') lightgray 50% no-repeat;
+    background-size: cover;
+    background-position: center;
 }
