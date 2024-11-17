@@ -32,7 +32,7 @@ export function Navbar() {
     return (
         <nav className={`w-full flex ${sectionPadding}`}>
             <div className='flex w-full items-center'>
-                <img src={logo} alt='Gym World logo' />
+                <img src={logo} alt='Gym World logo' className='w-[104px] xl:w-[139px]' />
             </div>
             <div className='hidden xl:flex w-full justify-center items-center'>
                 <div className='flex md:gap-10 xl:gap-20'>
