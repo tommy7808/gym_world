@@ -1,8 +1,10 @@
 import logo from '../assets/images/logo.png';
 import menuIcon from '../assets/icons/menu.svg';
+import closeIcon from '../assets/icons/close.svg';
 import { ParagraphStyle } from '../utils';
 import { Button, ButtonSize } from './common';
 import { useEffect, useRef, useState } from 'react';
+import { motion } from 'framer-motion';
 
 export function Navbar() {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -48,7 +50,28 @@ export function Navbar() {
             <div className='flex w-full justify-end items-center'>
                 <Button text='Join Us' hasOutline={true} size={ButtonSize.SMALL} additionalStyles='hidden lg:flex' />
                 <div className='lg:hidden relative' ref={menuRef}>
-                    <img src={menuIcon} alt='menu button' className='w-12 md:w-14' onClick={toggleMenu} />
+                    {!isMenuOpen && (
+                        <motion.img
+                            src={menuIcon}
+                            alt='menu button'
+                            className='w-12 md:w-14'
+                            onClick={toggleMenu}
+                            animate={{
+                                rotate: !isMenuOpen ? 180 : 90,
+                            }}
+                        />
+                    )}
+                    {isMenuOpen && (
+                        <motion.img
+                            src={closeIcon}
+                            alt='close button'
+                            className='w-12 md:w-14'
+                            onClick={toggleMenu}
+                            animate={{
+                                rotate: isMenuOpen ? 180 : 0,
+                            }}
+                        />
+                    )}
                     {isMenuOpen && (
                         <nav className='w-auto min-w-fit flex flex-col gap-5 absolute bg-neutral-grey-200 p-5 top-full left-[100%] transform -translate-x-[100%]'>
                             <a
