@@ -32,7 +32,7 @@ export const slideVariants = {
     initial: { y: '100%', opacity: 0 },
     whileInView: { y: '0%', opacity: 1 },
     exit: { y: '100%', opacity: 0 },
-    transition: { duration: 0.5, ease: 'easeInOut' }
+    transition: { duration: 0.8, ease: 'easeInOut' }
 }
 
 /** The default container padding */

@@ -56,19 +56,22 @@ const ModalContent = forwardRef(({ onOpen, onClose, isOpen }: ModalContentProps,
     );
 });
 
-export function Modal() {
+interface ModalProps {
+    isOpen: boolean;
+    setIsOpen: React.Dispatch<React.SetStateAction<boolean>>;
+}
+export function Modal(props: ModalProps) {
     const dialogRef = useRef<HTMLDialogElement>(null);
-    const [isOpen, setIsOpen] = useState(true);
 
     function openModal() {
         dialogRef.current?.showModal();
-        setIsOpen(true);
+        props.setIsOpen(true);
     }
 
     function closeModal() {
         dialogRef.current?.close();
-        setIsOpen(false);
+        props.setIsOpen(false);
     }
 
-    return <ModalContent ref={dialogRef} onOpen={openModal} onClose={closeModal} isOpen={isOpen} />;
+    return <ModalContent ref={dialogRef} onOpen={openModal} onClose={closeModal} isOpen={props.isOpen} />;
 }
