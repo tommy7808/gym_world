@@ -1,7 +1,7 @@
 import logo from '../assets/images/logo.png';
 import menuIcon from '../assets/icons/menu.svg';
 import closeIcon from '../assets/icons/close.svg';
-import { ParagraphStyle } from '../utils';
+import { ParagraphStyle, sectionPadding } from '../utils';
 import { Button, ButtonSize } from './common';
 import { useEffect, useRef, useState } from 'react';
 import { motion } from 'framer-motion';
@@ -30,11 +30,11 @@ export function Navbar() {
     }, []);
 
     return (
-        <nav className='w-full flex px-6 md:px-[4.625rem] lg:px-[5.5rem]'>
+        <nav className={`w-full flex ${sectionPadding}`}>
             <div className='flex w-full items-center'>
                 <img src={logo} alt='Gym World logo' />
             </div>
-            <div className='hidden lg:flex w-full justify-center items-center'>
+            <div className='hidden xl:flex w-full justify-center items-center'>
                 <div className='flex md:gap-10 xl:gap-20'>
                     <a href='#' className={`${ParagraphStyle.p1} font-medium hover:text-primary-300`}>
                         Home
@@ -48,8 +48,8 @@ export function Navbar() {
                 </div>
             </div>
             <div className='flex w-full justify-end items-center'>
-                <Button text='Join Us' hasOutline={true} size={ButtonSize.SMALL} additionalStyles='hidden lg:flex' />
-                <div className='lg:hidden relative' ref={menuRef}>
+                <Button text='Join Us' hasOutline={true} size={ButtonSize.SMALL} additionalStyles='hidden xl:flex' />
+                <div className='xl:hidden relative' ref={menuRef}>
                     {!isMenuOpen && (
                         <motion.img
                             src={menuIcon}

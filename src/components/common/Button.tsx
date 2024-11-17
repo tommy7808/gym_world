@@ -22,7 +22,7 @@ export function Button(props: ButtonProps) {
         }
 
         case ButtonSize.LARGE: {
-            buttonPadding = 'px-8 md:px-12 py-2 md:py-4';
+            buttonPadding = 'px-8 md:px-12 py-2 md:py-3 lg:py-4';
             break;
         }
 
