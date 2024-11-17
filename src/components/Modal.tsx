@@ -1,6 +1,6 @@
 import { forwardRef, useEffect, useRef, useState } from 'react';
 import { createPortal } from 'react-dom';
-import { Button, Paragraph } from './common';
+import { Button, ButtonSize, Paragraph } from './common';
 import { ParagraphSize, slideVariants } from '../utils';
 import closeIcon from '../assets/icons/close.svg';
 import rightArrowIcon from '../assets/icons/right-arrow.svg';
@@ -41,7 +41,13 @@ const ModalContent = forwardRef(({ onOpen, onClose, isOpen }: ModalContentProps,
                             Hi, this web application was built for demonstration purposes. As a result certain actions
                             are disabled.
                         </Paragraph>
-                        <Button text='CONTINUE' hasOutline={false} icon={rightArrowIcon} onClick={onClose} />
+                        <Button
+                            size={ButtonSize.LARGE}
+                            text='CONTINUE'
+                            hasOutline={false}
+                            icon={rightArrowIcon}
+                            onClick={onClose}
+                        />
                     </div>
                 </motion.dialog>
             )}
