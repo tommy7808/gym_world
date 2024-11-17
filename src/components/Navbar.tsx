@@ -1,8 +1,32 @@
 import logo from '../assets/images/logo.png';
+import menuIcon from '../assets/icons/menu.svg';
 import { ParagraphStyle } from '../utils';
 import { Button, ButtonSize } from './common';
+import { useEffect, useRef, useState } from 'react';
 
 export function Navbar() {
+    const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+    const menuRef = useRef<HTMLDivElement>(null);
+
+    function toggleMenu() {
+        setIsMenuOpen((prevState) => !prevState);
+    }
+
+    // Close menu if clicked outside
+    useEffect(() => {
+        function handleClickOutside(event: MouseEvent) {
+            if (menuRef.current && !menuRef.current.contains(event.target as Node)) {
+                setIsMenuOpen(false);
+            }
+        }
+
+        document.addEventListener('mousedown', handleClickOutside);
+        return () => {
+            document.removeEventListener('mousedown', handleClickOutside);
+        };
+    }, []);
+
     return (
         <nav className='w-full flex px-6 md:px-[4.625rem] lg:px-[5.5rem]'>
             <div className='flex w-full items-center'>
@@ -22,7 +46,38 @@ export function Navbar() {
                 </div>
             </div>
             <div className='flex w-full justify-end items-center'>
-                <Button text='Join Us' hasOutline={true} size={ButtonSize.SMALL} />
+                <Button text='Join Us' hasOutline={true} size={ButtonSize.SMALL} additionalStyles='hidden lg:flex' />
+                <div className='lg:hidden relative' ref={menuRef}>
+                    <img src={menuIcon} alt='menu button' className='w-12 md:w-14' onClick={toggleMenu} />
+                    {isMenuOpen && (
+                        <nav className='w-auto min-w-fit flex flex-col gap-5 absolute bg-neutral-grey-200 p-5 top-full left-[100%] transform -translate-x-[100%]'>
+                            <a
+                                href='#'
+                                className={`${ParagraphStyle.p1} font-medium hover:text-primary-300`}
+                                onClick={toggleMenu}>
+                                Home
+                            </a>
+                            <a
+                                href='#'
+                                className={`${ParagraphStyle.p1} font-medium hover:text-primary-300`}
+                                onClick={toggleMenu}>
+                                Programs
+                            </a>
+                            <a
+                                href='#'
+                                className={`${ParagraphStyle.p1} font-medium hover:text-primary-300`}
+                                onClick={toggleMenu}>
+                                Memberships
+                            </a>
+                            <Button
+                                text='Join Us'
+                                hasOutline={true}
+                                size={ButtonSize.SMALL}
+                                additionalStyles='w-full self-center whitespace-nowrap'
+                            />
+                        </nav>
+                    )}
+                </div>
             </div>
         </nav>
     );

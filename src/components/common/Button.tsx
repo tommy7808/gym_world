@@ -9,6 +9,7 @@ interface ButtonProps {
     hasOutline: boolean;
     size: ButtonSize;
     icon?: string;
+    additionalStyles?: string;
     onClick?: () => void;
 }
 
@@ -34,7 +35,9 @@ export function Button(props: ButtonProps) {
     return (
         <button
             onClick={props.onClick}
-            className={`rounded-md flex items-center justify-center font-medium gap-4 ${buttonPadding} ${ParagraphStyle.p1} ${outlineStyles}`}>
+            className={`rounded-md flex items-center justify-center font-medium gap-4 ${buttonPadding} ${
+                ParagraphStyle.p1
+            } ${outlineStyles} ${props.additionalStyles ?? ''}`}>
             {props.text}
             {props.icon && <img className='w-[24px] sm:w-[30px] xl:w-[36px]' src={props.icon} />}
         </button>
