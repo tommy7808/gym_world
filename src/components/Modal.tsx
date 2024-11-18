@@ -1,4 +1,4 @@
-import { forwardRef, useEffect, useRef, useState } from 'react';
+import { forwardRef, useEffect, useRef } from 'react';
 import { createPortal } from 'react-dom';
 import { Button, ButtonSize, Paragraph } from './common';
 import { ParagraphSize, slideVariants } from '../utils';

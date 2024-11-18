@@ -35,7 +35,7 @@ export function Button(props: ButtonProps) {
     return (
         <button
             onClick={props.onClick}
-            className={`rounded-md flex items-center justify-center font-medium gap-4 ${buttonPadding} ${
+            className={`flex items-center justify-center font-medium gap-4 ${buttonPadding} ${
                 ParagraphStyle.p1
             } ${outlineStyles} ${props.additionalStyles ?? ''}`}>
             {props.text}
