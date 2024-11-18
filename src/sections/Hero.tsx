@@ -6,8 +6,8 @@ import { useState } from 'react';
 export function Hero() {
     const [isModalOpen, setisModalOpen] = useState(true);
     return (
-        <Section additionalStyles='hero-img'>
-            <div className='w-full h-full 2xl:max-w-[1616px] flex flex-col'>
+        <Section additionalStyles='hero-img' isFullScreen={true}>
+            <div className='w-full h-full flex flex-col'>
                 <Modal isOpen={isModalOpen} setIsOpen={setisModalOpen} />
                 <Navbar />
                 <div className='flex flex-col flex-1 gap-[3.75rem] justify-center items-center self-center'>

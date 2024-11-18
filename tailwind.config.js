@@ -8,12 +8,12 @@ export default {
     extend: {
       colors: {
         neutral: {
-          grey: {
+          black: {
             '100': '#333131',
             '200': '#242323',
             '300': '#131212',
           },
-          black: {
+          grey: {
             '100': '#E4E4E4',
             '200': '#D4D4D4',
             '300': '#ABABAB',

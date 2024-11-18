@@ -73,7 +73,7 @@ export function Navbar() {
                         />
                     )}
                     {isMenuOpen && (
-                        <nav className='w-auto min-w-fit flex flex-col gap-5 absolute bg-neutral-grey-200 p-5 top-full left-[100%] transform -translate-x-[100%]'>
+                        <nav className='w-auto min-w-fit flex flex-col gap-5 absolute bg-neutral-black-200 p-5 top-full left-[100%] transform -translate-x-[100%]'>
                             <a
                                 href='#'
                                 className={`${ParagraphStyle.p1} font-medium hover:text-primary-300`}
