@@ -18,15 +18,16 @@ export const SlideUp = forwardRef<HTMLDivElement, SlideUpProps>(
                 className={styles}
                 initial={{
                     opacity: 0,
-                    y: 50,
+                    y: '10%',
                 }}
                 animate={{
                     opacity: animationState ? 1 : 0,
-                    y: animationState ? 50 : 0,
+                    y: animationState ? 0 : '10%',
                 }}
                 transition={{
                     duration,
                     delay,
+                    type: 'spring',
                 }}>
                 {children}
             </motion.div>
