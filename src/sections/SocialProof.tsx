@@ -16,7 +16,7 @@ function SocialProofItem({ number, suffix, subText }: SocialProofItemProps) {
             <CountUp
                 end={number}
                 suffix={suffix}
-                duration={2}
+                duration={3}
                 className='text-[1.25rem] sm:text-[1.5rem] xl:text-[1.75rem] text-primary-300 font-semibold text-center'
             />
             <span className='text-[1rem] sm:text-[1.25rem] xl:text-[1.5rem] text-center'>{subText}</span>

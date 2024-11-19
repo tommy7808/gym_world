@@ -27,12 +27,9 @@ const ModalContent = forwardRef(({ onOpen, onClose, isOpen }: ModalContentProps,
                     {...slideVariants}
                     className={`flex flex-col w-[90%] md:w-3/4 max-w-[1203px] h-[60%] md:h-[70%] rounded-xl fixed top-0 text-white modal-img p-3`}>
                     <header className='flex w-full justify-end p-4'>
-                        <img
-                            src={closeIcon}
-                            alt='close button'
-                            className='w-6 lg:w-9 cursor-pointer'
-                            onClick={onClose}
-                        />
+                        <button onClick={onClose}>
+                            <img src={closeIcon} alt='close button' className='w-6 lg:w-9' />
+                        </button>
                     </header>
                     <div className='flex flex-col px-4 xl:px-[4rem] py-3 flex-1 justify-center items-center gap-[4rem]'>
                         <Paragraph

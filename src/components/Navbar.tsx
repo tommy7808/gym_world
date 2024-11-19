@@ -51,26 +51,28 @@ export function Navbar() {
                 <Button text='Join Us' hasOutline={true} size={ButtonSize.SMALL} additionalStyles='hidden xl:flex' />
                 <div className='xl:hidden relative' ref={menuRef}>
                     {!isMenuOpen && (
-                        <motion.img
-                            src={menuIcon}
-                            alt='menu button'
-                            className='w-12 md:w-14'
-                            onClick={toggleMenu}
-                            animate={{
-                                rotate: !isMenuOpen ? 180 : 90,
-                            }}
-                        />
+                        <button onClick={toggleMenu}>
+                            <motion.img
+                                src={menuIcon}
+                                alt='menu button'
+                                className='w-12 md:w-14'
+                                animate={{
+                                    rotate: !isMenuOpen ? 180 : 90,
+                                }}
+                            />
+                        </button>
                     )}
                     {isMenuOpen && (
-                        <motion.img
-                            src={closeIcon}
-                            alt='close button'
-                            className='w-12 md:w-14'
-                            onClick={toggleMenu}
-                            animate={{
-                                rotate: isMenuOpen ? 180 : 0,
-                            }}
-                        />
+                        <button onClick={toggleMenu}>
+                            <motion.img
+                                src={closeIcon}
+                                alt='close button'
+                                className='w-12 md:w-14'
+                                animate={{
+                                    rotate: isMenuOpen ? 180 : 0,
+                                }}
+                            />
+                        </button>
                     )}
                     {isMenuOpen && (
                         <nav className='w-auto min-w-fit flex flex-col gap-5 absolute bg-neutral-black-200 p-5 top-full left-[100%] transform -translate-x-[100%]'>
