@@ -1,5 +1,5 @@
 import './index.css';
-import { Hero, Programs, SocialProof } from './sections';
+import { Hero, Memberships, Programs, SocialProof } from './sections';
 
 function App() {
     return (
@@ -7,6 +7,7 @@ function App() {
             <Hero />
             <SocialProof />
             <Programs />
+            <Memberships />
         </main>
     );
 }
