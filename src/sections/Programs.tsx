@@ -35,7 +35,7 @@ export function Programs() {
         'flex w-full max-w-[300px] lg:max-w-[375px] h-full min-h-[450px] lg:min-h-[380px] xl:min-h-[450px] 2xl:min-h-[34rem]';
 
     return (
-        <Section>
+        <Section id='programs'>
             <div ref={divRef} className='flex flex-col w-full gap-12 lg:gap-20 xl:gap-[6rem]'>
                 <div className='flex flex-col gap-3'>
                     <Heading size={HeadingSize.h2}>

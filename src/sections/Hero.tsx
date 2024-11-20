@@ -6,7 +6,7 @@ import { useState } from 'react';
 export function Hero() {
     const [isModalOpen, setisModalOpen] = useState(true);
     return (
-        <Section additionalStyles='hero-img' isFullScreen={true}>
+        <Section id='hero' additionalStyles='hero-img' isFullScreen={true}>
             <div className='w-full h-full flex flex-col'>
                 <Modal isOpen={isModalOpen} setIsOpen={setisModalOpen} />
                 <Navbar />
@@ -24,7 +24,14 @@ export function Hero() {
                         </Paragraph>
                     </SlideUp>
                     <SlideUp duration={1} delay={1.8} animationState={!isModalOpen}>
-                        <Button text='Get Started' hasOutline={false} size={ButtonSize.LARGE} icon={rightArrowIcon} />
+                        <a href='#memberships'>
+                            <Button
+                                text='Get Started'
+                                hasOutline={false}
+                                size={ButtonSize.LARGE}
+                                icon={rightArrowIcon}
+                            />
+                        </a>
                     </SlideUp>
                 </div>
             </div>

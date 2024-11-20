@@ -36,13 +36,13 @@ export function Navbar() {
             </div>
             <div className='hidden xl:flex w-full justify-center items-center'>
                 <div className='flex md:gap-10 xl:gap-20'>
-                    <a href='#' className={`${ParagraphStyle.p1} font-medium hover:text-primary-300`}>
+                    <a href='#hero' className={`${ParagraphStyle.p1} font-medium hover:text-primary-300`}>
                         Home
                     </a>
-                    <a href='#' className={`${ParagraphStyle.p1} font-medium hover:text-primary-300`}>
+                    <a href='#programs' className={`${ParagraphStyle.p1} font-medium hover:text-primary-300`}>
                         Programs
                     </a>
-                    <a href='#' className={`${ParagraphStyle.p1} font-medium hover:text-primary-300`}>
+                    <a href='#memberships' className={`${ParagraphStyle.p1} font-medium hover:text-primary-300`}>
                         Memberships
                     </a>
                 </div>
@@ -77,29 +77,31 @@ export function Navbar() {
                     {isMenuOpen && (
                         <nav className='w-auto min-w-fit flex flex-col gap-5 absolute bg-neutral-black-200 p-5 top-full left-[100%] transform -translate-x-[100%]'>
                             <a
-                                href='#'
+                                href='#hero'
                                 className={`${ParagraphStyle.p1} font-medium hover:text-primary-300`}
                                 onClick={toggleMenu}>
                                 Home
                             </a>
                             <a
-                                href='#'
+                                href='#programs'
                                 className={`${ParagraphStyle.p1} font-medium hover:text-primary-300`}
                                 onClick={toggleMenu}>
                                 Programs
                             </a>
                             <a
-                                href='#'
+                                href='#memberships'
                                 className={`${ParagraphStyle.p1} font-medium hover:text-primary-300`}
                                 onClick={toggleMenu}>
                                 Memberships
                             </a>
-                            <Button
-                                text='Join Us'
-                                hasOutline={true}
-                                size={ButtonSize.SMALL}
-                                additionalStyles='w-full self-center whitespace-nowrap'
-                            />
+                            <a href='#memberships'>
+                                <Button
+                                    text='Join Us'
+                                    hasOutline={true}
+                                    size={ButtonSize.SMALL}
+                                    additionalStyles='w-full self-center whitespace-nowrap'
+                                />
+                            </a>
                         </nav>
                     )}
                 </div>

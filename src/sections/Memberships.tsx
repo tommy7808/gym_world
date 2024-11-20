@@ -63,7 +63,7 @@ export function Memberships() {
     const slideUpContainerStyle = 'flex w-full max-w-[300px] lg:max-w-[375px]';
 
     return (
-        <Section additionalStyles='bg-neutral-black-200'>
+        <Section id='memberships' additionalStyles='bg-neutral-black-200'>
             <div ref={divRef} className='flex flex-col w-full gap-12 lg:gap-20 xl:gap-[6rem] items-stretch'>
                 <div className='flex flex-col gap-3'>
                     <Heading size={HeadingSize.h2}>Membership Plans</Heading>
