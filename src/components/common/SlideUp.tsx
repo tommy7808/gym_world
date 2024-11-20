@@ -18,11 +18,11 @@ export const SlideUp = forwardRef<HTMLDivElement, SlideUpProps>(
                 className={styles}
                 initial={{
                     opacity: 0,
-                    y: '10%',
+                    y: 50,
                 }}
                 animate={{
                     opacity: animationState ? 1 : 0,
-                    y: animationState ? 0 : '10%',
+                    y: animationState ? 0 : 50,
                 }}
                 transition={{
                     duration,
