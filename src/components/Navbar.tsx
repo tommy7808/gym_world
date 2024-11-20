@@ -1,4 +1,4 @@
-import logo from '../assets/images/logo.png';
+import logo from '../assets/images/logo.svg';
 import menuIcon from '../assets/icons/menu.svg';
 import closeIcon from '../assets/icons/close.svg';
 import { ParagraphStyle, sectionPadding } from '../utils';

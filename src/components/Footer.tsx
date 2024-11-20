@@ -1,5 +1,5 @@
 import { sectionPadding } from '../utils';
-import logo from '../assets/images/logo.png';
+import logo from '../assets/images/logo.svg';
 import facebookIcon from '../assets/icons/facebook.svg';
 import twitterIcon from '../assets/icons/twitter.svg';
 import instagramIcon from '../assets/icons/instagram.svg';

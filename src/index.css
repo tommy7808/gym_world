@@ -23,41 +23,41 @@ body {
 /* Background images */
 .hero-img {
     background: linear-gradient(0deg, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.2) 100%),
-        url('images/hero.png') lightgray 50% no-repeat;
+        url('/images/hero.png') lightgray 50% no-repeat;
     background-size: cover;
     background-position: center;
 }
 
 .strength-img {
     background: linear-gradient(0deg, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.2) 100%),
-        url('images/strength.png') lightgray 50% no-repeat;
+        url('/images/strength.png') lightgray 50% no-repeat;
     background-size: cover;
     background-position: center;
 }
 
 .boxing-img {
     background: linear-gradient(0deg, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.2) 100%),
-        url('images/boxing.png') lightgray 50% no-repeat;
+        url('/images/boxing.png') lightgray 50% no-repeat;
     background-size: cover;
     background-position: center;
 }
 .cardio-img {
     background: linear-gradient(0deg, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.2) 100%),
-        url('images/cardio.png') lightgray 50% no-repeat;
+        url('/images/cardio.png') lightgray 50% no-repeat;
     background-size: cover;
     background-position: center;
 }
 
 .yoga-img {
     background: linear-gradient(0deg, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.2) 100%),
-        url('images/yoga.png') lightgray 50% no-repeat;
+        url('/images/yoga.png') lightgray 50% no-repeat;
     background-size: cover;
     background-position: center;
 }
 
 .modal-img {
     background: linear-gradient(0deg, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.4) 100%),
-        url('images/modal.jpeg') lightgray 50% no-repeat;
+        url('/images/modal.jpeg') lightgray 50% no-repeat;
     background-size: cover;
     background-position: center;
 }
