@@ -20,13 +20,13 @@ export function Footer() {
                     <div className='flex flex-col gap-8'>
                         <span className='text-xl text-primary-300 font-medium'>Company</span>
                         <div className='flex flex-col gap-2'>
-                            <a href='#hero' className='text-base font-light'>
+                            <a href='#hero' className='text-base font-light hover:text-primary-300'>
                                 Home
                             </a>
-                            <a href='#programs' className='text-base font-light'>
+                            <a href='#programs' className='text-base font-light hover:text-primary-300'>
                                 Programs
                             </a>
-                            <a href='#memberships' className='text-base font-light'>
+                            <a href='#memberships' className='text-base font-light hover:text-primary-300'>
                                 Memberships
                             </a>
                         </div>
