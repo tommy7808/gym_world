@@ -64,7 +64,7 @@ export function Memberships() {
 
     return (
         <Section additionalStyles='bg-neutral-black-200'>
-            <div ref={divRef} className='flex flex-col w-full gap-[6rem] items-stretch'>
+            <div ref={divRef} className='flex flex-col w-full gap-12 lg:gap-20 xl:gap-[6rem] items-stretch'>
                 <div className='flex flex-col gap-3'>
                     <Heading size={HeadingSize.h2}>Membership Plans</Heading>
                     <Paragraph size={ParagraphSize.p1}>

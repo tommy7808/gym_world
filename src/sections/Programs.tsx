@@ -36,7 +36,7 @@ export function Programs() {
 
     return (
         <Section>
-            <div ref={divRef} className='flex flex-col w-full gap-[6rem]'>
+            <div ref={divRef} className='flex flex-col w-full gap-12 lg:gap-20 xl:gap-[6rem]'>
                 <div className='flex flex-col gap-3'>
                     <Heading size={HeadingSize.h2}>
                         Guided training at no

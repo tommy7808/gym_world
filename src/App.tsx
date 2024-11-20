@@ -1,3 +1,4 @@
+import { Footer } from './components';
 import './index.css';
 import { Hero, Memberships, Programs, SocialProof } from './sections';
 
@@ -8,6 +9,7 @@ function App() {
             <SocialProof />
             <Programs />
             <Memberships />
+            <Footer />
         </main>
     );
 }
