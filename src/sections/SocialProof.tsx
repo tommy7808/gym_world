@@ -27,7 +27,7 @@ export function SocialProof() {
     const divRef = useRef<HTMLDivElement>(null);
     const isDivInView = useInView(divRef, { once: true, amount: 0.5 }); // Animation triggers when 50% of the element is in view.
     return (
-        <Section additionalStyles='bg-neutral-black-200 !py-0 !px-0'>
+        <Section id='social-proof' additionalStyles='bg-neutral-black-200 !py-0 !px-0'>
             <div
                 ref={divRef}
                 className='flex w-full h-auto flex-col gap-8 lg:gap-0 lg:flex-row justify-between items-center mt-9 lg:mt-0 lg:ml-9'>

@@ -10,7 +10,7 @@ interface ButtonProps {
     size: ButtonSize;
     icon?: string;
     additionalStyles?: string;
-    onClick?: () => void;
+    onClick?: Function;
 }
 
 export function Button(props: ButtonProps) {
@@ -34,7 +34,7 @@ export function Button(props: ButtonProps) {
         : 'bg-primary-300 hover:bg-transparent border-solid border-primary-300 border-2';
     return (
         <button
-            onClick={props.onClick}
+            onClick={props.onClick as any}
             className={`flex items-center justify-center font-medium gap-4 ${buttonPadding} ${
                 ParagraphStyle.p1
             } ${outlineStyles} ${props.additionalStyles ?? ''}`}>

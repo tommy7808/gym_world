@@ -48,7 +48,14 @@ export function Navbar() {
                 </div>
             </div>
             <div className='flex w-full justify-end items-center'>
-                <Button text='Join Us' hasOutline={true} size={ButtonSize.SMALL} additionalStyles='hidden xl:flex' />
+                <a href='#memberships'>
+                    <Button
+                        text='Join Us'
+                        hasOutline={true}
+                        size={ButtonSize.SMALL}
+                        additionalStyles='hidden xl:flex'
+                    />
+                </a>
                 <div className='xl:hidden relative' ref={menuRef}>
                     {!isMenuOpen && (
                         <button onClick={toggleMenu}>

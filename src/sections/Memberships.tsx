@@ -11,9 +11,10 @@ interface MembershipItemProps {
     priceText: string;
     hasGymAccess: boolean;
     hasTrainingPrograms: boolean;
+    setIsModalOpen: React.Dispatch<React.SetStateAction<boolean>>;
 }
 
-function MembershipItem({ name, priceText, hasGymAccess, hasTrainingPrograms }: MembershipItemProps) {
+function MembershipItem({ name, priceText, hasGymAccess, hasTrainingPrograms, setIsModalOpen }: MembershipItemProps) {
     return (
         <div className='bg-neutral-black-100 w-full flex flex-col items-center py-10 px-8 gap-8 border-2 border-solid border-transparent hover:border-primary-200'>
             <img src={weightIcon} alt='weight' />
@@ -43,13 +44,14 @@ function MembershipItem({ name, priceText, hasGymAccess, hasTrainingPrograms }: 
                     hasOutline={true}
                     size={ButtonSize.SMALL}
                     additionalStyles='w-full self-center whitespace-nowrap'
+                    onClick={setIsModalOpen}
                 />
             </div>
         </div>
     );
 }
 
-export function Memberships() {
+export function Memberships({ setIsModalOpen }: { setIsModalOpen: React.Dispatch<React.SetStateAction<boolean>> }) {
     const divRef = useRef<HTMLDivElement>(null);
     const membership1Ref = useRef<HTMLDivElement>(null);
     const membership2Ref = useRef<HTMLDivElement>(null);
@@ -78,6 +80,7 @@ export function Memberships() {
                         animationState={isDivInView && isMembership1RefInView}
                         styles={slideUpContainerStyle}>
                         <MembershipItem
+                            setIsModalOpen={setIsModalOpen}
                             name='day plan'
                             priceText='€15/1DAY'
                             hasGymAccess={false}
@@ -90,6 +93,7 @@ export function Memberships() {
                         animationState={isDivInView && isMembership2RefInView}
                         styles={slideUpContainerStyle}>
                         <MembershipItem
+                            setIsModalOpen={setIsModalOpen}
                             name='monthly plan'
                             priceText='€30/M'
                             hasGymAccess={true}
@@ -102,6 +106,7 @@ export function Memberships() {
                         animationState={isDivInView && isMembership3RefInView}
                         styles={slideUpContainerStyle}>
                         <MembershipItem
+                            setIsModalOpen={setIsModalOpen}
                             name='yearly plan'
                             priceText='€315/Y'
                             hasGymAccess={true}

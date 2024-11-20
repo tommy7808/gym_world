@@ -1,14 +1,13 @@
 import { Navbar, Modal, Heading, Paragraph, Button, ButtonSize, SlideUp, Section } from '../components';
 import { HeadingSize, ParagraphSize } from '../utils';
 import rightArrowIcon from '../assets/icons/right-arrow.svg';
-import { useState } from 'react';
+import { GenericModalProps } from '../components/types';
 
-export function Hero() {
-    const [isModalOpen, setisModalOpen] = useState(true);
+export function Hero({ isModalOpen, setIsModalOpen }: GenericModalProps) {
     return (
         <Section id='hero' additionalStyles='hero-img' isFullScreen={true}>
             <div className='w-full h-full flex flex-col'>
-                <Modal isOpen={isModalOpen} setIsOpen={setisModalOpen} />
+                <Modal isOpen={isModalOpen} setIsOpen={setIsModalOpen} />
                 <Navbar />
                 <div className='flex flex-col flex-1 gap-[3.75rem] justify-center items-center self-center'>
                     <SlideUp duration={1} delay={0.8} animationState={!isModalOpen}>
