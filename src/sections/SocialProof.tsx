@@ -40,7 +40,7 @@ export function SocialProof() {
                     {isDivInView && <SocialProofItem number={20} suffix='+' subText='Expert Trainers' />}
                     {isDivInView && <SocialProofItem number={10} suffix=' Years' subText='Experience' />}
                 </div>
-                <img src={socialProofImg} className='h-[340px] lg:h-full w-full lg:w-2/5 object-cover' />
+                <img src={socialProofImg} className='h-[340px] lg:h-full w-full lg:w-2/5 object-cover' loading='lazy' />
             </div>
         </Section>
     );

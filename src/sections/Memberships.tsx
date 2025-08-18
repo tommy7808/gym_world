@@ -17,7 +17,7 @@ interface MembershipItemProps {
 function MembershipItem({ name, priceText, hasGymAccess, hasTrainingPrograms, setIsModalOpen }: MembershipItemProps) {
     return (
         <div className='bg-neutral-black-100 w-full flex flex-col items-center py-10 px-8 gap-8 border-2 border-solid border-transparent hover:border-primary-200'>
-            <img src={weightIcon} alt='weight' />
+            <img src={weightIcon} alt='weight' loading='lazy' />
             <div className='flex flex-col gap-2'>
                 <Heading size={HeadingSize.h4} additionalStyles='uppercase'>
                     {name}
@@ -27,15 +27,23 @@ function MembershipItem({ name, priceText, hasGymAccess, hasTrainingPrograms, se
             <div className='flex flex-col gap-8 justify-center items-center'>
                 <div className='flex flex-col gap-3'>
                     <div className='flex items-center gap-4'>
-                        <img src={tickBoxFilled} alt='filled tick box' />
+                        <img src={tickBoxFilled} alt='filled tick box' loading='lazy' />
                         <span className={ParagraphStyle.p3}>Unlimited equipment.</span>
                     </div>
                     <div className='flex items-center gap-4'>
-                        <img src={hasGymAccess ? tickBoxFilled : tickBoxUnfilled} alt='filled tick box' />
+                        <img
+                            src={hasGymAccess ? tickBoxFilled : tickBoxUnfilled}
+                            alt='filled tick box'
+                            loading='lazy'
+                        />
                         <span className={ParagraphStyle.p3}>Unlimited gym access.</span>
                     </div>
                     <div className='flex items-center gap-4'>
-                        <img src={hasTrainingPrograms ? tickBoxFilled : tickBoxUnfilled} alt='filled tick box' />
+                        <img
+                            src={hasTrainingPrograms ? tickBoxFilled : tickBoxUnfilled}
+                            alt='filled tick box'
+                            loading='lazy'
+                        />
                         <span className={ParagraphStyle.p3}>All Training Programs.</span>
                     </div>
                 </div>

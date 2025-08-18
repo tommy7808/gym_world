@@ -1,7 +1,7 @@
 import { Heading, Paragraph, Section, SlideUp } from '../components';
 import { HeadingSize, ParagraphSize } from '../utils';
 import { useInView } from 'framer-motion';
-import { useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
 
 interface ProgramItemProps {
     name: string;
@@ -9,8 +9,20 @@ interface ProgramItemProps {
 }
 
 function ProgramItem({ name, bgClass }: ProgramItemProps) {
+    const ref = useRef(null);
+    const isInView = useInView(ref, { margin: '100px', once: true });
+    const [isBgLoaded, setIsBgLoaded] = useState(false);
+
+    useEffect(() => {
+        if (isInView) {
+            setIsBgLoaded(true);
+        }
+    }, [isInView]);
+
     return (
-        <div className={`w-full h-full flex justify-center items-center ${bgClass}`}>
+        <div
+            ref={ref}
+            className={`w-full h-full flex justify-center items-center ${isBgLoaded ? bgClass : 'bg-gray-300'}`}>
             <Paragraph size={ParagraphSize.p2} additionalStyles='uppercase'>
                 {name}
             </Paragraph>

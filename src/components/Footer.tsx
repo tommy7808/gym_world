@@ -9,11 +9,11 @@ export function Footer() {
         <footer className={`w-full bg-neutral-black-200 py-20 justify-center items-center ${sectionPadding}`}>
             <div className='flex flex-col lg:flex-row gap-[7.375rem] justify-center items-center lg:items-start'>
                 <div className='flex flex-col gap-5 items-center'>
-                    <img src={logo} alt='Gym World logo' className='w-[104px] xl:w-[139px]' />
+                    <img src={logo} alt='Gym World logo' className='w-[104px] xl:w-[139px]' loading='lazy' />
                     <div className='flex gap-9'>
-                        <img src={instagramIcon} alt='instagram' className='w-6 xl:w-8' />
-                        <img src={twitterIcon} alt='twitter' className='w-6 xl:w-8' />
-                        <img src={facebookIcon} alt='facebook' className='w-6 xl:w-8' />
+                        <img src={instagramIcon} alt='instagram' className='w-6 xl:w-8' loading='lazy' />
+                        <img src={twitterIcon} alt='twitter' className='w-6 xl:w-8' loading='lazy' />
+                        <img src={facebookIcon} alt='facebook' className='w-6 xl:w-8' loading='lazy' />
                     </div>
                 </div>
                 <div className='flex gap-16 flex-wrap'>
