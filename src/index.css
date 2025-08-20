@@ -23,41 +23,47 @@ body {
 /* Background images */
 .hero-img {
     background: linear-gradient(0deg, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.2) 100%),
-        url('/images/hero.png') lightgray 50% no-repeat;
+        url('https://res.cloudinary.com/dopxg7h3m/image/upload/f_auto,q_auto/v1755638051/gym_world/hero_u5cral.png')
+            lightgray 50% no-repeat;
     background-size: cover;
     background-position: center;
 }
 
 .strength-img {
     background: linear-gradient(0deg, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.2) 100%),
-        url('/images/strength.png') lightgray 50% no-repeat;
+        url('https://res.cloudinary.com/dopxg7h3m/image/upload/f_auto,q_auto/v1755638052/gym_world/strength_vdk2ro.png')
+            lightgray 50% no-repeat;
     background-size: cover;
     background-position: center;
 }
 
 .boxing-img {
     background: linear-gradient(0deg, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.2) 100%),
-        url('/images/boxing.png') lightgray 50% no-repeat;
+        url('https://res.cloudinary.com/dopxg7h3m/image/upload/f_auto,q_auto/v1755638051/gym_world/boxing_j9xkbr.png')
+            lightgray 50% no-repeat;
     background-size: cover;
     background-position: center;
 }
 .cardio-img {
     background: linear-gradient(0deg, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.2) 100%),
-        url('/images/cardio.png') lightgray 50% no-repeat;
+        url('https://res.cloudinary.com/dopxg7h3m/image/upload/f_auto,q_auto/v1755638051/gym_world/cardio_vlg5qh.png')
+            lightgray 50% no-repeat;
     background-size: cover;
     background-position: center;
 }
 
 .yoga-img {
     background: linear-gradient(0deg, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.2) 100%),
-        url('/images/yoga.png') lightgray 50% no-repeat;
+        url('https://res.cloudinary.com/dopxg7h3m/image/upload/f_auto,q_auto/v1755638052/gym_world/yoga_uslcjv.png')
+            lightgray 50% no-repeat;
     background-size: cover;
     background-position: center;
 }
 
 .modal-img {
     background: linear-gradient(0deg, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.4) 100%),
-        url('/images/modal.jpeg') lightgray 50% no-repeat;
+        url('https://res.cloudinary.com/dopxg7h3m/image/upload/f_auto,q_auto/v1755638052/gym_world/modal_w92tgs.jpg')
+            lightgray 50% no-repeat;
     background-size: cover;
     background-position: center;
 }

@@ -1,7 +1,6 @@
 import CountUp from 'react-countup';
 import { Heading, Section } from '../components';
 import { HeadingSize } from '../utils';
-import socialProofImg from '../assets/images/social-proof.png';
 import { useInView } from 'framer-motion';
 import { useRef } from 'react';
 
@@ -40,7 +39,11 @@ export function SocialProof() {
                     {isDivInView && <SocialProofItem number={20} suffix='+' subText='Expert Trainers' />}
                     {isDivInView && <SocialProofItem number={10} suffix=' Years' subText='Experience' />}
                 </div>
-                <img src={socialProofImg} className='h-[340px] lg:h-full w-full lg:w-2/5 object-cover' loading='lazy' />
+                <img
+                    src='https://res.cloudinary.com/dopxg7h3m/image/upload/f_auto,q_auto/v1755691142/gym_world/social-proof_oaifo6.png'
+                    className='h-[340px] lg:h-full w-full lg:w-2/5 object-cover'
+                    loading='lazy'
+                />
             </div>
         </Section>
     );
