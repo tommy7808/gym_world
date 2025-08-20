@@ -40,9 +40,10 @@ export function SocialProof() {
                     {isDivInView && <SocialProofItem number={10} suffix=' Years' subText='Experience' />}
                 </div>
                 <img
-                    src='https://res.cloudinary.com/dopxg7h3m/image/upload/f_auto,q_auto/v1755691142/gym_world/social-proof_oaifo6.png'
+                    src='https://res.cloudinary.com/dopxg7h3m/image/upload/f_auto,q_auto,w_509,h_340,c_fill/v1755691142/gym_world/social-proof_oaifo6.png'
                     className='h-[340px] lg:h-full w-full lg:w-2/5 object-cover'
                     loading='lazy'
+                    alt=''
                 />
             </div>
         </Section>
