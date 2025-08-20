@@ -9,6 +9,7 @@ interface ButtonProps {
     hasOutline: boolean;
     size: ButtonSize;
     icon?: string;
+    iconAlt?: string;
     additionalStyles?: string;
     onClick?: Function;
 }
@@ -39,7 +40,7 @@ export function Button(props: ButtonProps) {
                 ParagraphStyle.p1
             } ${outlineStyles} ${props.additionalStyles ?? ''}`}>
             {props.text}
-            {props.icon && <img className='w-[24px] sm:w-[30px] xl:w-[36px]' src={props.icon} />}
+            {props.icon && <img alt={props.iconAlt} className='w-[24px] sm:w-[30px] xl:w-[36px]' src={props.icon} />}
         </button>
     );
 }

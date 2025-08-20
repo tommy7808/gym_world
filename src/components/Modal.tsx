@@ -43,6 +43,7 @@ const ModalContent = forwardRef(({ onOpen, onClose, isOpen }: ModalContentProps,
                             text='CONTINUE'
                             hasOutline={false}
                             icon={rightArrowIcon}
+                            iconAlt='continue button icon'
                             onClick={onClose}
                         />
                     </div>

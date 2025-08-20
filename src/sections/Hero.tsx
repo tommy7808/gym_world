@@ -29,6 +29,7 @@ export function Hero({ isModalOpen, setIsModalOpen }: GenericModalProps) {
                                 hasOutline={false}
                                 size={ButtonSize.LARGE}
                                 icon={rightArrowIcon}
+                                iconAlt='get started button icon'
                             />
                         </a>
                     </SlideUp>
